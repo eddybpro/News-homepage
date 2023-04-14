@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root{
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+header{
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+header .logo{
+    cursor: pointer;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+    transition: all .2s ease-in-out;
+}
+
+nav ul a:hover{
+    color: var(--Soft-red);
+}
+
+nav .menu{
+    display: none;
+}
+
+nav .close{
+    display: none;
+}
+
+main{
+    width: 100%;
+    max-width: 1000px;
+    margin: .5rem;
+}
+
+main .grid-container{
+    display: grid;
+    grid-template-areas: 
+    'img-box img-box list-box'
+    'img-box img-box list-box'
+    'title-box para-box list-box';
+    gap: 1rem;
+}
+
+main .grid-container .img-container{
+    height: 250px;
+    width: 100%;
+    grid-area: img-box;
+    background: url('images/image-web-3-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main .grid-container .title-container{
+    grid-area: title-box;
+}
+
+.title-container .title{
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--Very-dark-blue);
+}
+
+main .grid-container .para-container{
+    grid-area: para-box;
+}
+
+.para-container .para{
+    color: var(--Dark-grayish-blue);
+    padding-bottom: .5rem;
+}
+
+.para-container .btn{
+    font-weight: 700;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    background-color: var(--Soft-red);
+    color: var(--Off-white);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.para-container .btn:hover{
+    background-color: var(--Very-dark-blue);
+}
+
+main .grid-container .list-container{
+    grid-area: list-box;
+    background-color: var(--Very-dark-blue);
+    padding: .75rem;
+    padding-top: 1rem;
+}
+
+.list-container .new{
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--Soft-orange);
+    text-transform: uppercase;
+}
+
+.list-container .box:not(:last-child){
+    padding-bottom: .75rem;
+    border-bottom: 1px solid var(--Grayish-blue);
+}
+
+.list-container .box a{
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+.list-container .box a:hover .sub-title{
+    color: var(--Soft-orange);
+}
+
+.list-container .box .sub-title{
+    color: var(--Off-white);
+    margin: .75rem 0;
+}
+
+.list-container .box .new-para{
+    color: var(--Dark-grayish-blue);
+}
+
+main .box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+    margin-top: 4rem;
+}
+
+.box-container .card{
+    display: grid;
+    grid-template-areas: 'img-con img-con txt-con txt-con txt-con';
+    gap: .5rem;
+}
+
+.box-container .card img{
+    grid-area: img-con;
+    width: 100px;
+    height: 100%;
+}
+
+.box-container .card .txt-container{
+    grid-area: txt-con;
+}
+
+.card .txt-container .title{
+    color: var(--Grayish-blue);
+    font-size: 1.25rem;
+    margin-bottom: .25rem;
+}
+
+.card .txt-container a{
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+.card .txt-container a:hover .sub-title{
+    color: var(--Soft-red);
+}
+
+.card .txt-container .sub-title{
+    color: var(--Very-dark-blue);
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: .5rem;
+}
+
+.card .txt-container .desc{
+    color: var(--Dark-grayish-blue);
+}
+
+footer{
+    text-align: center;
+    margin: 1rem 0;
+    color: var(--Dark-Grayish-blue);
+}
+
+footer a{
+    text-decoration: none;
+    font-weight: 800;
+    color: var(--Very-dark-blue);
+}
+
+footer a:hover{
+    color: var(--Soft-red);
+}
+
+@media screen and (max-width:700px) {
+    header{
+        display: block;
+        width: 95%;
+        margin: 1rem .5rem;
+    }
+
+    nav{
+        position: relative;
+    }
+
+    nav .list{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: -3.5rem;
+        /* left :100%; */
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding-left: 1.5rem;
+        padding-top: 8rem;
+        gap: 2rem;
+        list-style: none;
+        background-color: var(--Off-white);
+    }
+
+    .show-menu{
+        animation-name: menu;
+        animation-duration: 2.5s;
+    }
+
+    .hide-menu{
+        animation-name: close;
+        animation-duration: 2.5s;
+    }
+
+    @keyframes menu {
+        from{
+            left:100%;
+        }
+
+        to{
+            left:-5px;
+        }
+    }
+
+    @keyframes close {
+        from{
+            left:-5px;
+        }
+
+        to{
+            left:100%;
+        }
+    }
+
+    nav .list li a{
+        font-weight: 700;
+        color: var(--Very-dark-blue);
+    }
+
+    nav .menu{
+        position: absolute;
+        top: -1.75rem;
+        right: .5rem;
+        display: block;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        z-index: 10;
+    }
+    
+    nav .close{
+        position: absolute;
+        top: -1.75rem;
+        right: .5rem;
+        display: block;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    nav .none{
+        display: none;
+    }
+
+    main{
+        width: 95%;
+    }
+
+    main .grid-container{
+        grid-template-areas: 'img-box'
+        'title-box'
+        'para-box'
+        'list-box';
+    }
+
+    main .grid-container .img-container{
+        height: 300px;
+        background: url('images/image-web-3-mobile.jpg');
+        background-position: top 15%  left 55%;
+    }
+
+    main .box-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="home">
+    <img src="images/logo.svg" alt="" class="logo">
+    <nav>
+      <ul class="list none">
+        <li><a href="#home" class="home">Home</a></li>
+        <li><a href="#new">New</a></li>
+        <li><a href="#popular">Popular</a></li>
+        <li><a href="#trending">Trending</a></li>
+        <li><a href="#categories">Categories</a></li>
+      </ul>
+      <button class="menu">
+        <img src="images/icon-menu.svg" alt="">
+      </button>
+      <button class="none close">
+        <img src="images/icon-menu-close.svg" alt="">
+      </button>
+    </nav>
+  </header>
+  
+  <main>
+    <div class="grid-container">
+      <div class="img-container"></div>
+      <div class="title-container" id="popular">
+        <h1 class="title">
+          The Bright Future of Web 3.0?
+        </h1>
+      </div>
+      <div class="para-container" id="trending">
+        <p class="para">
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
+        </p>
+        <button class="btn">Read more
+        </button>
+      </div>
+      <div class="list-container" id="new">
+        <h1 class="new">new</h1>
+        <div class="box">
+          <a href="#">
+            <h4 class="sub-title">
+              Hydrogen VS Electric Cars
+            </h4>
+          </a>
+          <p class="new-para">
+            Will hydrogen-fueled cars ever catch up to EVs?
+          </p>
+        </div>
+        <div class="box">
+          <a href="#">
+            <h4 class="sub-title">
+              The Downsides of AI Artistry
+            </h4>
+          </a>
+          <p class="new-para">
+            What are the possible adverse effects of on-demand AI image generation?
+          </p>
+        </div>
+        <div class="box">
+          <a href="#">
+            <h4 class="sub-title">
+              Is VC Funding Drying Up?
+            </h4>
+          </a>
+          <p class="new-para">
+            Private funding by VC firms is down 50% YOY. We take a look at what that means.
+          </p>
+        </div>
+        </div>
+    </div>
+    <div class="box-container" id="categories">
+      <div class="card">
+        <img src="images/image-retro-pcs.jpg" alt="">
+        <div class="txt-container">
+          <h3 class="title">01</h3>
+          <a href="#">
+            <p class="sub-title">
+              Reviving Retro PCs
+            </p>
+          </a>
+          <p class="desc">
+            What happens when old PCs are given modern upgrades?
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/image-top-laptops.jpg" alt="">
+        <div class="txt-container">
+          <h3 class="title">02</h3>
+            <a href="#">
+              <p class="sub-title">
+                Top 10 Laptops of 2022
+              </p>
+            </a>
+          <p class="desc">
+            Our best picks for various needs and budgets.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/image-gaming-growth.jpg" alt="">
+        <div class="txt-container">
+          <h3 class="title">03</h3>
+          <a href="#">
+            <p class="sub-title">
+              The Growth of Gaming
+            </p>
+          </a>
+          <p class="desc">
+            How the pandemic has sparked fresh opportunities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/eddybpro">Eddybpro</a>.
+    </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
